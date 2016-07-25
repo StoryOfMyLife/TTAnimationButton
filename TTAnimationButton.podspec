@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-  					A vivid button with beautiful animation like twitter 'like button'.
+  					Initial version. A vivid button with beautiful animation like twitter 'like button'.
                    DESC
 
   s.homepage     = "https://github.com/StoryOfMyLife/TTAnimationButton.git"
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/StoryOfMyLife/TTAnimationButton.git" }
+  s.source       = { :git => "https://github.com/StoryOfMyLife/TTAnimationButton.git", :tag => "0.0.1" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
