@@ -7,6 +7,7 @@
 //
 
 #import "TTAnimationButton.h"
+#import "CALayer+TTSpringAnimation.h"
 
 static const CGFloat imageScale = 0.65;
 
@@ -59,15 +60,7 @@ static const CGFloat imageScale = 0.65;
     self.imageShape.fillColor = self.imageSelectedColor.CGColor;
     
     //4. image scale out
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)((duration - delayed) * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        CASpringAnimation *showAnimation = [CASpringAnimation animationWithKeyPath:@"transform.scale"];
-        showAnimation.fromValue = @0;
-        showAnimation.toValue = @1;
-        showAnimation.duration = showAnimation.settlingDuration;
-        showAnimation.removedOnCompletion = NO;
-        showAnimation.fillMode = kCAFillModeForwards;
-        [self.imageShape addAnimation:showAnimation forKey:@"spring"];
-    });
+    [self.imageShape animateWithKeypath:@"transform.scale" fromValue:0 toValue:1 duration:1 delay:(duration - delayed) usingDamping:7 initialSpringVelocity:10 completion:nil];
     
     //2. circle scale out
     [CATransaction setAnimationDuration:duration];
@@ -100,11 +93,7 @@ static const CGFloat imageScale = 0.65;
     self.imageShape.fillColor = self.imageNormalColor.CGColor;
     
     //image scale normal
-    CASpringAnimation *scaleAnimation = [CASpringAnimation animationWithKeyPath:@"transform.scale"];
-    scaleAnimation.duration = scaleAnimation.settlingDuration;
-    scaleAnimation.fromValue = @1.3;
-    scaleAnimation.toValue = @1;
-    [self.imageShape addAnimation:scaleAnimation forKey:@"scaleNormal"];
+    [self.imageShape animateWithKeypath:@"transform.scale" fromValue:1.3 toValue:1 duration:1 delay:0 usingDamping:7 initialSpringVelocity:10 completion:nil];
 }
 
 - (CAShapeLayer *)circleShape
