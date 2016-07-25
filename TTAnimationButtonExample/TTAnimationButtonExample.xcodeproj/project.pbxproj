@@ -1,0 +1,536 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5209F4E61D45E13900344431 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5209F4E51D45E13900344431 /* main.m */; };
+		5209F4E91D45E13900344431 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5209F4E81D45E13900344431 /* AppDelegate.m */; };
+		5209F4EC1D45E13900344431 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5209F4EB1D45E13900344431 /* ViewController.m */; };
+		5209F4EF1D45E13900344431 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5209F4ED1D45E13900344431 /* Main.storyboard */; };
+		5209F4F11D45E13900344431 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5209F4F01D45E13900344431 /* Assets.xcassets */; };
+		5209F4F41D45E13900344431 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5209F4F21D45E13900344431 /* LaunchScreen.storyboard */; };
+		5209F4FF1D45E13900344431 /* TTAnimationButtonExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5209F4FE1D45E13900344431 /* TTAnimationButtonExampleTests.m */; };
+		5209F50A1D45E13900344431 /* TTAnimationButtonExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5209F5091D45E13900344431 /* TTAnimationButtonExampleUITests.m */; };
+		5209F51A1D45E15500344431 /* TTAnimationButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5209F5191D45E15500344431 /* TTAnimationButton.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5209F4FB1D45E13900344431 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5209F4D91D45E13900344431 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5209F4E01D45E13900344431;
+			remoteInfo = TTAnimationButtonExample;
+		};
+		5209F5061D45E13900344431 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5209F4D91D45E13900344431 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5209F4E01D45E13900344431;
+			remoteInfo = TTAnimationButtonExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5209F4E11D45E13900344431 /* TTAnimationButtonExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTAnimationButtonExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5209F4E51D45E13900344431 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5209F4E71D45E13900344431 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5209F4E81D45E13900344431 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5209F4EA1D45E13900344431 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5209F4EB1D45E13900344431 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5209F4EE1D45E13900344431 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5209F4F01D45E13900344431 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5209F4F31D45E13900344431 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5209F4F51D45E13900344431 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5209F4FA1D45E13900344431 /* TTAnimationButtonExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TTAnimationButtonExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5209F4FE1D45E13900344431 /* TTAnimationButtonExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTAnimationButtonExampleTests.m; sourceTree = "<group>"; };
+		5209F5001D45E13900344431 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5209F5051D45E13900344431 /* TTAnimationButtonExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TTAnimationButtonExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5209F5091D45E13900344431 /* TTAnimationButtonExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTAnimationButtonExampleUITests.m; sourceTree = "<group>"; };
+		5209F50B1D45E13900344431 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5209F5181D45E15500344431 /* TTAnimationButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAnimationButton.h; sourceTree = "<group>"; };
+		5209F5191D45E15500344431 /* TTAnimationButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTAnimationButton.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5209F4DE1D45E13900344431 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5209F4F71D45E13900344431 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5209F5021D45E13900344431 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5209F4D81D45E13900344431 = {
+			isa = PBXGroup;
+			children = (
+				5209F5171D45E15500344431 /* TTAnimationButton */,
+				5209F4E31D45E13900344431 /* TTAnimationButtonExample */,
+				5209F4FD1D45E13900344431 /* TTAnimationButtonExampleTests */,
+				5209F5081D45E13900344431 /* TTAnimationButtonExampleUITests */,
+				5209F4E21D45E13900344431 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5209F4E21D45E13900344431 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5209F4E11D45E13900344431 /* TTAnimationButtonExample.app */,
+				5209F4FA1D45E13900344431 /* TTAnimationButtonExampleTests.xctest */,
+				5209F5051D45E13900344431 /* TTAnimationButtonExampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5209F4E31D45E13900344431 /* TTAnimationButtonExample */ = {
+			isa = PBXGroup;
+			children = (
+				5209F4E71D45E13900344431 /* AppDelegate.h */,
+				5209F4E81D45E13900344431 /* AppDelegate.m */,
+				5209F4EA1D45E13900344431 /* ViewController.h */,
+				5209F4EB1D45E13900344431 /* ViewController.m */,
+				5209F4ED1D45E13900344431 /* Main.storyboard */,
+				5209F4F01D45E13900344431 /* Assets.xcassets */,
+				5209F4F21D45E13900344431 /* LaunchScreen.storyboard */,
+				5209F4F51D45E13900344431 /* Info.plist */,
+				5209F4E41D45E13900344431 /* Supporting Files */,
+			);
+			path = TTAnimationButtonExample;
+			sourceTree = "<group>";
+		};
+		5209F4E41D45E13900344431 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5209F4E51D45E13900344431 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5209F4FD1D45E13900344431 /* TTAnimationButtonExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				5209F4FE1D45E13900344431 /* TTAnimationButtonExampleTests.m */,
+				5209F5001D45E13900344431 /* Info.plist */,
+			);
+			path = TTAnimationButtonExampleTests;
+			sourceTree = "<group>";
+		};
+		5209F5081D45E13900344431 /* TTAnimationButtonExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5209F5091D45E13900344431 /* TTAnimationButtonExampleUITests.m */,
+				5209F50B1D45E13900344431 /* Info.plist */,
+			);
+			path = TTAnimationButtonExampleUITests;
+			sourceTree = "<group>";
+		};
+		5209F5171D45E15500344431 /* TTAnimationButton */ = {
+			isa = PBXGroup;
+			children = (
+				5209F5181D45E15500344431 /* TTAnimationButton.h */,
+				5209F5191D45E15500344431 /* TTAnimationButton.m */,
+			);
+			path = TTAnimationButton;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5209F4E01D45E13900344431 /* TTAnimationButtonExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5209F50E1D45E13900344431 /* Build configuration list for PBXNativeTarget "TTAnimationButtonExample" */;
+			buildPhases = (
+				5209F4DD1D45E13900344431 /* Sources */,
+				5209F4DE1D45E13900344431 /* Frameworks */,
+				5209F4DF1D45E13900344431 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TTAnimationButtonExample;
+			productName = TTAnimationButtonExample;
+			productReference = 5209F4E11D45E13900344431 /* TTAnimationButtonExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5209F4F91D45E13900344431 /* TTAnimationButtonExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5209F5111D45E13900344431 /* Build configuration list for PBXNativeTarget "TTAnimationButtonExampleTests" */;
+			buildPhases = (
+				5209F4F61D45E13900344431 /* Sources */,
+				5209F4F71D45E13900344431 /* Frameworks */,
+				5209F4F81D45E13900344431 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5209F4FC1D45E13900344431 /* PBXTargetDependency */,
+			);
+			name = TTAnimationButtonExampleTests;
+			productName = TTAnimationButtonExampleTests;
+			productReference = 5209F4FA1D45E13900344431 /* TTAnimationButtonExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5209F5041D45E13900344431 /* TTAnimationButtonExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5209F5141D45E13900344431 /* Build configuration list for PBXNativeTarget "TTAnimationButtonExampleUITests" */;
+			buildPhases = (
+				5209F5011D45E13900344431 /* Sources */,
+				5209F5021D45E13900344431 /* Frameworks */,
+				5209F5031D45E13900344431 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5209F5071D45E13900344431 /* PBXTargetDependency */,
+			);
+			name = TTAnimationButtonExampleUITests;
+			productName = TTAnimationButtonExampleUITests;
+			productReference = 5209F5051D45E13900344431 /* TTAnimationButtonExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5209F4D91D45E13900344431 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = liuty;
+				TargetAttributes = {
+					5209F4E01D45E13900344431 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					5209F4F91D45E13900344431 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 5209F4E01D45E13900344431;
+					};
+					5209F5041D45E13900344431 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 5209F4E01D45E13900344431;
+					};
+				};
+			};
+			buildConfigurationList = 5209F4DC1D45E13900344431 /* Build configuration list for PBXProject "TTAnimationButtonExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5209F4D81D45E13900344431;
+			productRefGroup = 5209F4E21D45E13900344431 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5209F4E01D45E13900344431 /* TTAnimationButtonExample */,
+				5209F4F91D45E13900344431 /* TTAnimationButtonExampleTests */,
+				5209F5041D45E13900344431 /* TTAnimationButtonExampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5209F4DF1D45E13900344431 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5209F4F41D45E13900344431 /* LaunchScreen.storyboard in Resources */,
+				5209F4F11D45E13900344431 /* Assets.xcassets in Resources */,
+				5209F4EF1D45E13900344431 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5209F4F81D45E13900344431 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5209F5031D45E13900344431 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5209F4DD1D45E13900344431 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5209F4EC1D45E13900344431 /* ViewController.m in Sources */,
+				5209F4E91D45E13900344431 /* AppDelegate.m in Sources */,
+				5209F51A1D45E15500344431 /* TTAnimationButton.m in Sources */,
+				5209F4E61D45E13900344431 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5209F4F61D45E13900344431 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5209F4FF1D45E13900344431 /* TTAnimationButtonExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5209F5011D45E13900344431 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5209F50A1D45E13900344431 /* TTAnimationButtonExampleUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5209F4FC1D45E13900344431 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5209F4E01D45E13900344431 /* TTAnimationButtonExample */;
+			targetProxy = 5209F4FB1D45E13900344431 /* PBXContainerItemProxy */;
+		};
+		5209F5071D45E13900344431 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5209F4E01D45E13900344431 /* TTAnimationButtonExample */;
+			targetProxy = 5209F5061D45E13900344431 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5209F4ED1D45E13900344431 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5209F4EE1D45E13900344431 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5209F4F21D45E13900344431 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5209F4F31D45E13900344431 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5209F50C1D45E13900344431 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5209F50D1D45E13900344431 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5209F50F1D45E13900344431 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TTAnimationButtonExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iphone.TTAnimationButtonExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5209F5101D45E13900344431 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TTAnimationButtonExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iphone.TTAnimationButtonExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5209F5121D45E13900344431 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TTAnimationButtonExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iphone.TTAnimationButtonExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TTAnimationButtonExample.app/TTAnimationButtonExample";
+			};
+			name = Debug;
+		};
+		5209F5131D45E13900344431 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TTAnimationButtonExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iphone.TTAnimationButtonExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TTAnimationButtonExample.app/TTAnimationButtonExample";
+			};
+			name = Release;
+		};
+		5209F5151D45E13900344431 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TTAnimationButtonExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iphone.TTAnimationButtonExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TTAnimationButtonExample;
+			};
+			name = Debug;
+		};
+		5209F5161D45E13900344431 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TTAnimationButtonExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iphone.TTAnimationButtonExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TTAnimationButtonExample;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5209F4DC1D45E13900344431 /* Build configuration list for PBXProject "TTAnimationButtonExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5209F50C1D45E13900344431 /* Debug */,
+				5209F50D1D45E13900344431 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5209F50E1D45E13900344431 /* Build configuration list for PBXNativeTarget "TTAnimationButtonExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5209F50F1D45E13900344431 /* Debug */,
+				5209F5101D45E13900344431 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5209F5111D45E13900344431 /* Build configuration list for PBXNativeTarget "TTAnimationButtonExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5209F5121D45E13900344431 /* Debug */,
+				5209F5131D45E13900344431 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5209F5141D45E13900344431 /* Build configuration list for PBXNativeTarget "TTAnimationButtonExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5209F5151D45E13900344431 /* Debug */,
+				5209F5161D45E13900344431 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5209F4D91D45E13900344431 /* Project object */;
+}
