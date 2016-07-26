@@ -25,6 +25,8 @@ static const CGFloat imageScale = 0.65;
 
 @property (nonatomic, strong) UIImage *emitterImage;
 
+@property (nonatomic) BOOL disableAnimation;
+
 @end
 
 @implementation TTEmitterImageView
@@ -47,6 +49,10 @@ static const CGFloat imageScale = 0.65;
 
 - (void)select
 {
+    if (self.disableAnimation) {
+        self.imageShape.fillColor = self.imageSelectedColor.CGColor;
+        return;
+    }
     CGFloat duration = 0.3;
     CGFloat delayed = duration / 2;
     CGFloat scale = self.bounds.size.width / 2 + 1;
@@ -92,8 +98,10 @@ static const CGFloat imageScale = 0.65;
     //image color deselected
     self.imageShape.fillColor = self.imageNormalColor.CGColor;
     
-    //image scale normal
-    [self.imageShape animateWithKeypath:@"transform.scale" fromValue:1.3 toValue:1 duration:1 delay:0 usingDamping:7 initialSpringVelocity:10 completion:nil];
+    if (!self.disableAnimation) {
+        //image scale normal
+        [self.imageShape animateWithKeypath:@"transform.scale" fromValue:1.3 toValue:1 duration:1 delay:0 usingDamping:7 initialSpringVelocity:10 completion:nil];
+    }
 }
 
 - (CAShapeLayer *)circleShape
@@ -326,6 +334,12 @@ static const CGFloat imageScale = 0.65;
     }
 }
 
+- (void)setDisableAnimation:(BOOL)disableAnimation
+{
+    _disableAnimation = disableAnimation;
+    self.emitterImageView.disableAnimation = disableAnimation;
+}
+
 //clear background placehold image for button imageView
 - (UIImage *)placeholdImage:(UIImage *)image
 {
@@ -349,6 +363,7 @@ static const CGFloat imageScale = 0.65;
     [self.emitterImageView removeFromSuperview];
     self.emitterImageView = [[TTEmitterImageView alloc] initWithFrame:CGRectMake(0, 0, ceil(imageSize.width / imageScale), ceil(imageSize.height / imageScale))];
     
+    self.emitterImageView.disableAnimation = self.disableAnimation;
     self.emitterImageView.imageNormalColor = self.imageNormalColor;
     self.emitterImageView.imageSelectedColor = self.imageSelectedColor;
     

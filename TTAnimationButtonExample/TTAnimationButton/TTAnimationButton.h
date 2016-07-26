@@ -17,5 +17,6 @@
  *  YES to allow customize image size, set before setting image, default NO
  */
 @property (nonatomic, assign) BOOL enableCustomImageSize;
+@property (nonatomic, assign) BOOL disableAnimation;
 
 @end
