@@ -54,36 +54,42 @@ static const CGFloat imageScale = 0.65;
         return;
     }
     CGFloat duration = 0.3;
-    CGFloat delayed = duration / 2;
+    CGFloat circleDelay = duration / 2;
+    CGFloat maskDuration = duration - circleDelay;
     CGFloat scale = self.bounds.size.width / 2 + 1;
     
     //1. image hide
     CABasicAnimation *imageHideAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-    imageHideAnimation.duration = duration / 2;
+    imageHideAnimation.duration = duration / 3;
     imageHideAnimation.toValue = @0;
+    imageHideAnimation.fillMode = kCAFillModeForwards;
+    imageHideAnimation.removedOnCompletion = NO;
     [self.imageShape addAnimation:imageHideAnimation forKey:@"hide"];
     //image color selected
     self.imageShape.fillColor = self.imageSelectedColor.CGColor;
-    
-    //4. image scale out
-    [self.imageShape animateWithKeypath:@"transform.scale" fromValue:0 toValue:1 duration:1 delay:(duration - delayed) usingDamping:7 initialSpringVelocity:10 completion:nil];
     
     //2. circle scale out
     [CATransaction setAnimationDuration:duration];
     self.circleShape.transform = CATransform3DIdentity;
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayed * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(circleDelay * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
         //3. circle mask scale out
-        [CATransaction setAnimationDuration:duration - delayed];
+        [CATransaction setAnimationDuration:maskDuration];
         self.circleShape.mask.transform = CATransform3DMakeScale(scale, scale, 1);
         self.circleShape.fillColor = [self circleEndColor].CGColor;//circle color end
         
+        //4. image scale out
+        [self.imageShape animateWithKeypath:@"transform.scale" fromValue:0 toValue:1 duration:1 delay:maskDuration / 2 usingDamping:7 initialSpringVelocity:10 completion:nil];
+        
         //5. emitter animation
         CABasicAnimation *emitterAnimation = [CABasicAnimation animationWithKeyPath:@"emitterCells.fire.birthRate"];
-        emitterAnimation.beginTime = CACurrentMediaTime() + duration / 2;
+        emitterAnimation.beginTime = CACurrentMediaTime() + maskDuration / 2;
         emitterAnimation.fromValue = @(30);
         emitterAnimation.toValue = @(0);
         emitterAnimation.duration = 0.1;
+        emitterAnimation.removedOnCompletion = NO;
+        emitterAnimation.fillMode = kCAFillModeForwards;
         [self.emitterLayer addAnimation:emitterAnimation forKey:@"emitter"];
     });
 }
@@ -166,14 +172,11 @@ static const CGFloat imageScale = 0.65;
     CAEmitterCell *emitterCell = [CAEmitterCell emitterCell];
     
     CGFloat duration = 0.5;
-    
-    //粒子的名字
     emitterCell.name = @"fire";
-    //粒子参数的速度乘数因子
     emitterCell.birthRate = 0;
     emitterCell.lifetime = duration;
     
-    //粒子速度!!!关键   < 0 会往圆心飞
+    //velocity > 0 to ensure emitters flying away from circle
     emitterCell.velocity = self.bounds.size.width / 2;
     
     emitterCell.scale = 0.1;
@@ -190,7 +193,6 @@ static const CGFloat imageScale = 0.65;
     UIGraphicsBeginImageContextWithOptions(rect.size, NO, 1);
     UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:rect];
     [[self imageSelectedColor] setFill];
-    //    [[UIColor whiteColor] setFill];
     [path fill];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
@@ -210,7 +212,6 @@ static const CGFloat imageScale = 0.65;
 - (UIColor *)circleEndColor
 {
     return self.imageSelectedColor;
-//    return [UIColor colorWithRed:205.0/255.0 green:83.0/255.0 blue:166.0/255.0 alpha:1];
 }
 
 - (CGRect)imageFrame
@@ -254,8 +255,6 @@ static const CGFloat imageScale = 0.65;
 }
 
 @end
-
-
 
 
 @interface TTAnimationButton ()

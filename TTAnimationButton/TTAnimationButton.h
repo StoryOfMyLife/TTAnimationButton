@@ -14,9 +14,13 @@
 @property (nonatomic, strong) UIColor *imageNormalColor;
 
 /**
- *  YES to allow customize image size, set before setting image, default NO
+ *  YES to allow customize image size, set before setting image, default NO.
  */
 @property (nonatomic, assign) BOOL enableCustomImageSize;
+
+/**
+ *  YES to disable the animation, default NO.
+ */
 @property (nonatomic, assign) BOOL disableAnimation;
 
 @end

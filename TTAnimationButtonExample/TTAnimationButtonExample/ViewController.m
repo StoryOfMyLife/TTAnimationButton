@@ -20,7 +20,7 @@
 
     TTAnimationButton *button = [TTAnimationButton buttonWithType:UIButtonTypeCustom];
     button.enableCustomImageSize = YES;
-    button.disableAnimation = YES;
+//    button.disableAnimation = YES;
     button.frame = CGRectMake(0, 0, 30, 30);
     [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
