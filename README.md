@@ -2,7 +2,8 @@
 
 # TTAnimationButton
 A vivid button with beautiful selected animation like twitter like button.
-Support custom image shape using UIButton setImage:forState:.
+
+Support custom image shaping using UIButton setImage:forState:.
 
 [![Build Status](https://travis-ci.org/facebook/pop.svg)](https://travis-ci.org/facebook/pop)
 
