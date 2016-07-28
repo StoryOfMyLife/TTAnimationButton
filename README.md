@@ -1,10 +1,10 @@
 ![image](https://github.com/StoryOfMyLife/TTAnimationButton/blob/master/TTAnimationButtonExample/TTAnimationButtonExample/ScreenShot.gif)
 
-[![Build Status](https://travis-ci.org/facebook/pop.svg)](https://travis-ci.org/facebook/pop)
-
 # TTAnimationButton
 A vivid button with beautiful selected animation like twitter like button.
 Support custom image shape using UIButton setImage:forState:.
+
+[![Build Status](https://travis-ci.org/facebook/pop.svg)](https://travis-ci.org/facebook/pop)
 
 ## Installation
 
