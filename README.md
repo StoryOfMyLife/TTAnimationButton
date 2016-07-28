@@ -1,17 +1,18 @@
 ![image](https://github.com/StoryOfMyLife/TTAnimationButton/blob/master/TTAnimationButtonExample/TTAnimationButtonExample/ScreenShot.gif)
 
-[![Build Status](https://travis-ci.org/facebook/pop.svg)](https://travis-ci.org/facebook/pop)
-
 # TTAnimationButton
 A vivid button with beautiful selected animation like twitter like button.
-Support custom image shape using UIButton setImage:forState:.
+
+Support custom image shaping using UIButton setImage:forState:.
+
+[![Build Status](https://travis-ci.org/facebook/pop.svg)](https://travis-ci.org/facebook/pop)
 
 ## Installation
 
 TTAnimationButton is available on [CocoaPods](http://cocoapods.org). Just add the following to your project Podfile:
 
 ```ruby
-pod 'TTAnimationButton', '~> 0.0.2'
+pod 'TTAnimationButton'
 ```
 
 ## Usage
