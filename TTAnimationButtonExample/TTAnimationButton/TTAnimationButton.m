@@ -25,6 +25,8 @@ static const CGFloat imageScale = 0.65;
 
 @property (nonatomic, strong) UIImage *emitterImage;
 
+@property (nonatomic, assign) NSInteger birthRate;
+
 @property (nonatomic) BOOL disableAnimation;
 
 @end
@@ -85,9 +87,9 @@ static const CGFloat imageScale = 0.65;
         //5. emitter animation
         CABasicAnimation *emitterAnimation = [CABasicAnimation animationWithKeyPath:@"emitterCells.fire.birthRate"];
         emitterAnimation.beginTime = CACurrentMediaTime() + maskDuration / 2;
-        emitterAnimation.fromValue = @(30);
+        emitterAnimation.duration = 0.05;
+        emitterAnimation.fromValue = @(self.birthRate);
         emitterAnimation.toValue = @(0);
-        emitterAnimation.duration = 0.1;
         emitterAnimation.removedOnCompletion = NO;
         emitterAnimation.fillMode = kCAFillModeForwards;
         [self.emitterLayer addAnimation:emitterAnimation forKey:@"emitter"];
@@ -339,6 +341,12 @@ static const CGFloat imageScale = 0.65;
     self.emitterImageView.disableAnimation = disableAnimation;
 }
 
+- (void)setExplosionRate:(NSInteger)explosionRate
+{
+    _explosionRate = explosionRate;
+    self.emitterImageView.birthRate = explosionRate;
+}
+
 //clear background placehold image for button imageView
 - (UIImage *)placeholdImage:(UIImage *)image
 {
@@ -365,6 +373,7 @@ static const CGFloat imageScale = 0.65;
     self.emitterImageView.disableAnimation = self.disableAnimation;
     self.emitterImageView.imageNormalColor = self.imageNormalColor;
     self.emitterImageView.imageSelectedColor = self.imageSelectedColor;
+    self.emitterImageView.birthRate = self.explosionRate;
     
     self.emitterImageView.emitterImage = self.image;
     self.emitterImageView.center = self.imageView.center;

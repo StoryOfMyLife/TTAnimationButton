@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TTAnimationButton/CALayer+TTSpringAnimation.m"
-            timestampString = "491235102.999746"
+            filePath = "TTAnimationButton/TTAnimationButton.m"
+            timestampString = "491390374.566692"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "-keyframeAnimationWithKeypath:fromValue:toValue:duration:usingDamping:initialSpringVelocity:"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "-select"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

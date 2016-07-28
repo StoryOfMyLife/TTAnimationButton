@@ -20,7 +20,7 @@
 
     TTAnimationButton *button = [TTAnimationButton buttonWithType:UIButtonTypeCustom];
     button.enableCustomImageSize = YES;
-//    button.disableAnimation = YES;
+    button.explosionRate = 100;
     button.frame = CGRectMake(0, 0, 30, 30);
     [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -32,6 +32,7 @@
     TTAnimationButton *button1 = [TTAnimationButton buttonWithType:UIButtonTypeCustom];
     button1.imageSelectedColor = [UIColor colorWithRed:53.0/255.0 green:131.0/255.0 blue:215.0/255.0 alpha:1];
     button1.enableCustomImageSize = YES;
+    button1.explosionRate = 100;
     button1.frame = CGRectMake(0, 0, 30, 30);
     [button1 addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
     [button1 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -42,6 +43,7 @@
     TTAnimationButton *button2 = [TTAnimationButton buttonWithType:UIButtonTypeCustom];
     button2.imageSelectedColor = [UIColor colorWithRed:70.0/255.0 green:197.0/255.0 blue:85.0/255.0 alpha:1];
     button2.enableCustomImageSize = YES;
+    button2.explosionRate = 100;
     button2.frame = CGRectMake(0, 0, 30, 30);
     [button2 addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
     [button2 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -52,6 +54,7 @@
     TTAnimationButton *button3 = [TTAnimationButton buttonWithType:UIButtonTypeCustom];
     button3.enableCustomImageSize = YES;
     button3.imageSelectedColor = [UIColor colorWithRed:247.0/255.0 green:158.0/255.0 blue:16.0/255.0 alpha:1];
+    button3.explosionRate = 100;
     button3.frame = CGRectMake(0, 0, 30, 30);
     [button3 addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
     [button3 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
