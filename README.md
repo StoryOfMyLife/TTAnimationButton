@@ -11,7 +11,7 @@ Support custom image shape using UIButton setImage:forState:.
 TTAnimationButton is available on [CocoaPods](http://cocoapods.org). Just add the following to your project Podfile:
 
 ```ruby
-pod 'TTAnimationButton', '~> 0.0.2'
+pod 'TTAnimationButton'
 ```
 
 ## Usage
