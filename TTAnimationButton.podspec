@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "TTAnimationButton"
-  s.version      = "0.0.8"
+  s.version      = "0.0.9"
   s.summary      = "A vivid button with beautiful animation like twitter 'like button'."
 
   # This description is used to generate tags and improve search results.
@@ -78,10 +78,10 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/StoryOfMyLife/TTAnimationButton.git", :tag => "0.0.8" }
+  s.source       = { :git => "https://github.com/StoryOfMyLife/TTAnimationButton.git", :tag => "0.0.9" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
+  9
   #  CocoaPods is smart about how it includes source code. For source files
   #  giving a folder will include any swift, h, m, mm, c & cpp files.
   #  For header files it will include any header in the folder.

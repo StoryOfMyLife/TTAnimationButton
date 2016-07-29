@@ -15,8 +15,8 @@
 		5209F4F41D45E13900344431 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5209F4F21D45E13900344431 /* LaunchScreen.storyboard */; };
 		5209F4FF1D45E13900344431 /* TTAnimationButtonExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5209F4FE1D45E13900344431 /* TTAnimationButtonExampleTests.m */; };
 		5209F50A1D45E13900344431 /* TTAnimationButtonExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5209F5091D45E13900344431 /* TTAnimationButtonExampleUITests.m */; };
-		5209F51A1D45E15500344431 /* TTAnimationButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5209F5191D45E15500344431 /* TTAnimationButton.m */; };
-		5242DB071D46112900904386 /* CALayer+TTSpringAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5242DB061D46112900904386 /* CALayer+TTSpringAnimation.m */; };
+		52DB16E81D4B61ED006283FB /* CALayer+TTSpringAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DB16E51D4B61ED006283FB /* CALayer+TTSpringAnimation.m */; };
+		52DB16E91D4B61ED006283FB /* TTAnimationButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DB16E71D4B61ED006283FB /* TTAnimationButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,10 +53,10 @@
 		5209F5051D45E13900344431 /* TTAnimationButtonExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TTAnimationButtonExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5209F5091D45E13900344431 /* TTAnimationButtonExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTAnimationButtonExampleUITests.m; sourceTree = "<group>"; };
 		5209F50B1D45E13900344431 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5209F5181D45E15500344431 /* TTAnimationButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAnimationButton.h; sourceTree = "<group>"; };
-		5209F5191D45E15500344431 /* TTAnimationButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTAnimationButton.m; sourceTree = "<group>"; };
-		5242DB051D46112900904386 /* CALayer+TTSpringAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+TTSpringAnimation.h"; sourceTree = "<group>"; };
-		5242DB061D46112900904386 /* CALayer+TTSpringAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+TTSpringAnimation.m"; sourceTree = "<group>"; };
+		52DB16E41D4B61ED006283FB /* CALayer+TTSpringAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+TTSpringAnimation.h"; sourceTree = "<group>"; };
+		52DB16E51D4B61ED006283FB /* CALayer+TTSpringAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+TTSpringAnimation.m"; sourceTree = "<group>"; };
+		52DB16E61D4B61ED006283FB /* TTAnimationButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAnimationButton.h; sourceTree = "<group>"; };
+		52DB16E71D4B61ED006283FB /* TTAnimationButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTAnimationButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +87,7 @@
 		5209F4D81D45E13900344431 = {
 			isa = PBXGroup;
 			children = (
-				5209F5171D45E15500344431 /* TTAnimationButton */,
+				52DB16E31D4B61ED006283FB /* TTAnimationButton */,
 				5209F4E31D45E13900344431 /* TTAnimationButtonExample */,
 				5209F4FD1D45E13900344431 /* TTAnimationButtonExampleTests */,
 				5209F5081D45E13900344431 /* TTAnimationButtonExampleUITests */,
@@ -147,15 +147,16 @@
 			path = TTAnimationButtonExampleUITests;
 			sourceTree = "<group>";
 		};
-		5209F5171D45E15500344431 /* TTAnimationButton */ = {
+		52DB16E31D4B61ED006283FB /* TTAnimationButton */ = {
 			isa = PBXGroup;
 			children = (
-				5209F5181D45E15500344431 /* TTAnimationButton.h */,
-				5209F5191D45E15500344431 /* TTAnimationButton.m */,
-				5242DB051D46112900904386 /* CALayer+TTSpringAnimation.h */,
-				5242DB061D46112900904386 /* CALayer+TTSpringAnimation.m */,
+				52DB16E41D4B61ED006283FB /* CALayer+TTSpringAnimation.h */,
+				52DB16E51D4B61ED006283FB /* CALayer+TTSpringAnimation.m */,
+				52DB16E61D4B61ED006283FB /* TTAnimationButton.h */,
+				52DB16E71D4B61ED006283FB /* TTAnimationButton.m */,
 			);
-			path = TTAnimationButton;
+			name = TTAnimationButton;
+			path = ../TTAnimationButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,10 +290,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5209F4EC1D45E13900344431 /* ViewController.m in Sources */,
+				52DB16E81D4B61ED006283FB /* CALayer+TTSpringAnimation.m in Sources */,
 				5209F4E91D45E13900344431 /* AppDelegate.m in Sources */,
-				5209F51A1D45E15500344431 /* TTAnimationButton.m in Sources */,
+				52DB16E91D4B61ED006283FB /* TTAnimationButton.m in Sources */,
 				5209F4E61D45E13900344431 /* main.m in Sources */,
-				5242DB071D46112900904386 /* CALayer+TTSpringAnimation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

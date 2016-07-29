@@ -24,9 +24,6 @@
     button.frame = CGRectMake(0, 0, 30, 30);
     [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [button setTitle:@"123" forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
     [button setImage:[UIImage imageNamed:@"heart"] forState:UIControlStateNormal];
     [button sizeToFit];
     
