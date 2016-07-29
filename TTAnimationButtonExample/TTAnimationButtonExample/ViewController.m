@@ -70,7 +70,7 @@
 
 - (void)buttonClick:(UIButton *)button
 {
-    button.selected = !button.selected;
+    button.selected = YES;//!button.selected;
 }
 
 @end

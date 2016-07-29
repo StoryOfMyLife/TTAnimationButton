@@ -344,6 +344,12 @@ static const CGFloat imageScale = 0.65;
     self.emitterImageView.birthRate = explosionRate;
 }
 
+- (void)setDisableAnimation:(BOOL)disableAnimation
+{
+    _disableAnimation = disableAnimation;
+    self.emitterImageView.disableAnimation = disableAnimation;
+}
+
 //clear background placehold image for button imageView
 - (UIImage *)placeholdImage:(UIImage *)image
 {
@@ -367,6 +373,7 @@ static const CGFloat imageScale = 0.65;
     [self.emitterImageView removeFromSuperview];
     self.emitterImageView = [[TTEmitterImageView alloc] initWithFrame:CGRectMake(0, 0, ceil(imageSize.width / imageScale), ceil(imageSize.height / imageScale))];
     
+    self.emitterImageView.disableAnimation = self.disableAnimation;
     self.emitterImageView.imageNormalColor = self.imageNormalColor;
     self.emitterImageView.imageSelectedColor = self.imageSelectedColor;
     self.emitterImageView.birthRate = self.explosionRate;
