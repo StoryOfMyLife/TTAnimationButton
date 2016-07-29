@@ -30,9 +30,6 @@
  */
 @property (nonatomic, assign) BOOL enableCustomImageSize;
 
-/**
- *  YES to disable the animation, default NO.
- */
-@property (nonatomic, assign) BOOL disableAnimation;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
 
 @end

@@ -283,9 +283,19 @@ static const CGFloat imageScale = 0.65;
     }];
 }
 
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+{
+    self.emitterImageView.disableAnimation = !animated;
+    [self setSelected:selected];
+}
+
 - (void)setSelected:(BOOL)selected
 {
+    if (self.selected == selected) {
+        return;
+    }
     [super setSelected:selected];
+    self.emitterImageView.disableAnimation = YES;
     if (selected) {
         [self.emitterImageView select];
     } else {
@@ -335,12 +345,6 @@ static const CGFloat imageScale = 0.65;
     }
 }
 
-- (void)setDisableAnimation:(BOOL)disableAnimation
-{
-    _disableAnimation = disableAnimation;
-    self.emitterImageView.disableAnimation = disableAnimation;
-}
-
 - (void)setExplosionRate:(NSInteger)explosionRate
 {
     _explosionRate = explosionRate;
@@ -370,7 +374,6 @@ static const CGFloat imageScale = 0.65;
     [self.emitterImageView removeFromSuperview];
     self.emitterImageView = [[TTEmitterImageView alloc] initWithFrame:CGRectMake(0, 0, ceil(imageSize.width / imageScale), ceil(imageSize.height / imageScale))];
     
-    self.emitterImageView.disableAnimation = self.disableAnimation;
     self.emitterImageView.imageNormalColor = self.imageNormalColor;
     self.emitterImageView.imageSelectedColor = self.imageSelectedColor;
     self.emitterImageView.birthRate = self.explosionRate;
