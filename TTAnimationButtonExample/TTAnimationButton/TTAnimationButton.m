@@ -283,19 +283,12 @@ static const CGFloat imageScale = 0.65;
     }];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
-    self.emitterImageView.disableAnimation = !animated;
-    [self setSelected:selected];
-}
-
 - (void)setSelected:(BOOL)selected
 {
     if (self.selected == selected) {
         return;
     }
     [super setSelected:selected];
-    self.emitterImageView.disableAnimation = YES;
     if (selected) {
         [self.emitterImageView select];
     } else {
