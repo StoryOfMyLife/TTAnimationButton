@@ -16,7 +16,8 @@
     [CATransaction setCompletionBlock:completion];
     
     CAKeyframeAnimation *animation = [self keyframeAnimationWithKeypath:keypath fromValue:fromValue toValue:toValue duration:duration usingDamping:damping initialSpringVelocity:velocity];
-    animation.beginTime = CACurrentMediaTime() + delay;
+    CFTimeInterval currentTime = [self convertTime:CACurrentMediaTime() fromLayer:nil];
+    animation.beginTime = currentTime + delay;
     animation.removedOnCompletion = NO;
     animation.fillMode = kCAFillModeForwards;
     [self addAnimation:animation forKey:@"layer spring animation"];

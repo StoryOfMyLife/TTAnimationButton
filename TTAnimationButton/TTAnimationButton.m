@@ -86,7 +86,8 @@ static const CGFloat imageScale = 0.65;
         
         //5. emitter animation
         CABasicAnimation *emitterAnimation = [CABasicAnimation animationWithKeyPath:@"emitterCells.fire.birthRate"];
-        emitterAnimation.beginTime = CACurrentMediaTime() + maskDuration / 2;
+        CFTimeInterval currentTime = [self.emitterLayer convertTime:CACurrentMediaTime() fromLayer:nil];
+        emitterAnimation.beginTime = currentTime + maskDuration / 2;
         emitterAnimation.duration = 0.05;
         emitterAnimation.fromValue = @(self.birthRate);
         emitterAnimation.toValue = @(0);
